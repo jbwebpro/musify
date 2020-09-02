@@ -32,11 +32,16 @@
 #app {
     .main-content {
         .song-lyrics-list {
-            .song {
-                height: 250px;
-                a {
-                    color: red;
-                    text-decoration: none;
+            a {
+                text-decoration: none;
+                .song {
+                    height: 250px;
+                    .card-title {
+                        display: block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }

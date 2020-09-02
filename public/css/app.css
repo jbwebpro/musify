@@ -11266,12 +11266,18 @@ a.text-darker:focus {
   font-weight: 800 !important;
 }
 
-#app .main-content .song-lyrics-list .song {
+#app .main-content .song-lyrics-list a {
+  text-decoration: none;
+}
+
+#app .main-content .song-lyrics-list a .song {
   height: 250px;
 }
 
-#app .main-content .song-lyrics-list .song a {
-  color: red;
-  text-decoration: none;
+#app .main-content .song-lyrics-list a .song .card-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 

@@ -25,6 +25,7 @@
               <form action="{{route('songs.store')}}" method="post">
                 @csrf
                 @include('admin.songs.form')
+                <button type="submit" class="btn btn-primary btn-block">SAVE</button>
               </form>
             </div>
           </div>
