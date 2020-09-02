@@ -23,8 +23,13 @@
               <a href="{{route('songs.details',$song->path())}}" class="text-white">
                 <div class="card bg-dark">
                   <div class="card-body">
-                    <h5 class="card-title"><b>Wherever you will go</b></h5>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fuga quisquam amet eius praesentium. Incidunt pariatur...</p>
+                    <h5 class="card-title"><b>{{$song->title}}</b></h5>
+                    <p class="card-text">{{$song->lyrics}}</p>
+                    <div class="create-at">
+                      <small>
+                        {{$song->created_at}}
+                      </small>
+                    </div>
                   </div>
                 </div>
               </a>
