@@ -1,0 +1,41 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap");
+
+// Variables
+@import "default_variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #252525;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(29, 29, 29);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(22, 22, 22);
+}
+
+.navbar-brand {
+    &.branding {
+        font-family: $font-familt-montserrat !important;
+        font-weight: 800 !important;
+    }
+}
+.main-content {
+    .song-lyrics-list {
+        .song {
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+}
