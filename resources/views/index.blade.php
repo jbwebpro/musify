@@ -19,15 +19,18 @@
           </div>
           <div class="row song-lyrics-list">
             @foreach($songs as $song)
-            <div class="col-md-3 song mt-4">
+            <div class="col-md-3 mt-4">
               <a href="{{route('songs.details',$song->path())}}" class="text-white">
-                <div class="card bg-dark">
-                  <div class="card-body">
+                <div class="card song bg-dark">
+                  <div class="card-body d-flex justify-content-start flex-column">
                     <h5 class="card-title"><b>{{$song->title}}</b></h5>
-                    <p class="card-text">{{$song->lyrics}}</p>
-                    <div class="create-at">
+                    <p class="card-text">{{$song->excerpt(100)}}</p>
+                    <div class="create-at mt-auto d-flex justify-content-between">
                       <small>
-                        {{$song->created_at}}
+                        {{$song->created_date}}
+                      </small>
+                      <small>
+                        {{$song->artist}}
                       </small>
                     </div>
                   </div>

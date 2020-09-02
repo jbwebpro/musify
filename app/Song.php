@@ -13,6 +13,8 @@ class Song extends Model
         'lyrics',
     ];
 
+    protected $appends = ['created_date','lyrics_html'];
+
     public function setTitleAttribute($value)
     {
         $this->attributes['title'] = $value;
@@ -21,11 +23,33 @@ class Song extends Model
 
     public function getLyricsHtmlAttribute() 
     {
-        return clean(\Parsedown::instance()->text($this->lyrics));
+        return clean($this->lyricsHtml());
     }
+
+    public function lyricsHtml()
+    {
+        return \Parsedown::instance()->text($this->lyrics);
+    }
+
+    public function getExcerptAttribute()
+    {
+        return $this->excerpt(250);
+    }
+
+    public function excerpt($length)
+    {
+        return Str::limit(strip_tags($this->lyricsHtml()),$length);
+    }
+
+    
 
     public function path()
     {
         return Str::slug($this->title);
+    }
+
+    public function getCreatedDateAttribute()
+    {
+        return $this->created_at->diffForHumans();
     }
 }

@@ -11266,8 +11266,12 @@ a.text-darker:focus {
   font-weight: 800 !important;
 }
 
-.main-content .song-lyrics-list .song a {
-  color: #ffffff;
+#app .main-content .song-lyrics-list .song {
+  height: 250px;
+}
+
+#app .main-content .song-lyrics-list .song a {
+  color: red;
   text-decoration: none;
 }
 
