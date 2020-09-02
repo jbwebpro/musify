@@ -11243,27 +11243,32 @@ a.text-darker:focus {
   }
 }
 
-/* Track */
-
-::-webkit-scrollbar-track {
-  background: #252525;
+body::-webkit-scrollbar {
+  width: 1em;
 }
 
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-  background: #1d1d1d;
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(54, 54, 54, 0.884);
 }
 
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-  background: #161616;
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 
 .navbar-brand.branding {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 800 !important;
+}
+
+.flat {
+  border-radius: 0px !important;
+  border: 0px;
+}
+
+.unflat {
+  border-radius: 25px !important;
+  border: 0px;
 }
 
 #app .main-content .song-lyrics-list a {

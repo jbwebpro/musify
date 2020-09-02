@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','PagesController@index')->name('index');
-Route::get('/songs/{slug}','PagesController@details')->name('songs.details');
+Route::get('/songs/{song}','PagesController@details')->name('songs.details');
 
 
 Auth::routes();

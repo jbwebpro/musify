@@ -46,12 +46,15 @@ class Song extends Model
         return Str::limit(strip_tags($this->lyricsHtml()),$length);
     }
 
-    
+    // public function getRouteKeyName()
+    // {
+    //     return $this->slug;
+    // }
 
-    public function path()
-    {
-        return Str::slug($this->title);
-    }
+    // public function path()
+    // {
+    //     return Str::slug($this->title);
+    // }
 
     public function getCreatedDateAttribute()
     {
