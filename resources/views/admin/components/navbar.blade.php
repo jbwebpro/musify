@@ -1,6 +1,12 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">{{ config('app.name', 'Musify') }}</a>
+  <a class="navbar-brand" href="{{route('dashboard')}}">{{ config('app.name', 'Musify') }}</a>
   <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+  <!-- Left Side Of Navbar -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a href="{{route('index')}}" class="nav-link">Home</a>
+    </li>
+  </ul>
   <!-- Navbar Search-->
   <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
@@ -16,7 +22,7 @@
         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
             {{ Auth::user()->name }}
         </a>
-
+        
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Settings</a>
             <a class="dropdown-item" href="#">Profile</a>

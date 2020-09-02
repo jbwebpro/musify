@@ -8,7 +8,7 @@
   </div>
   <div class="form-group">
     <label for="lyrics">Lyrics</label>
-    <textarea class="form-control" name="lyrics" id="lyrics" rows="5" placeholder="Your lyrics">
+    <textarea class="form-control" name="lyrics" id="lyrics" rows="3">
       {{ old('lyrics') ?? $song->lyrics}}
     </textarea>
   </div>

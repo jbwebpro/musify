@@ -6,9 +6,14 @@
       <li class="breadcrumb-item active">Songs</li>
     </ol>
     <div class="card mb-4">
-      <div class="card-header">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>
           <i class="fas fa-table mr-1"></i>
           List of Songs
+        </span>
+        <span>
+          <a href="{{route('songs.create')}}" class="btn btn-primary">Add New Song Lyric</a>
+        </span>
       </div>
       <div class="card-body">
         <div class="table-responsive">
