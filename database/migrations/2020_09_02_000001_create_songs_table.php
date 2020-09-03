@@ -17,9 +17,11 @@ class CreateSongsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->nullable();
-            $table->string('artist');
+            $table->unsignedBigInteger('artist_id');
             $table->text('lyrics');
             $table->timestamps();
+
+            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('cascade');
         });
     }
 

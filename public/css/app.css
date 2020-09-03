@@ -11271,18 +11271,33 @@ body::-webkit-scrollbar-thumb {
   border: 0px;
 }
 
-#app .main-content .song-lyrics-list a {
-  text-decoration: none;
-}
-
-#app .main-content .song-lyrics-list a .song {
+#app .main-content .song-lyrics-list .song {
   height: 250px;
 }
 
-#app .main-content .song-lyrics-list a .song .card-title {
+#app .main-content .song-lyrics-list .song a {
+  text-decoration: none;
+}
+
+#app .main-content .song-lyrics-list .song a .card-title {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#app #artist-songs .artist-song {
+  height: 280px;
+}
+
+#app #artist-songs .artist-song .card-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#app #artist-songs .artist-song .card-text {
+  white-space: normal;
 }
 

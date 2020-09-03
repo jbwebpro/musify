@@ -13,11 +13,16 @@ class Song extends Model
         'lyrics',
     ];
 
-    protected $appends = ['created_date','lyrics_html'];
+    protected $appends = ['created_date','lyrics_html','artist_name'];
 
     public function artist()
     {
         return $this->belongsTo(Artist::class);
+    }
+
+    public function getArtistNameAttribute()
+    {
+        return $this->artist->name;
     }
 
     public function setTitleAttribute($value)

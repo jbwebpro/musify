@@ -38,10 +38,10 @@ body::-webkit-scrollbar-thumb {
 #app {
     .main-content {
         .song-lyrics-list {
-            a {
-                text-decoration: none;
-                .song {
-                    height: 250px;
+            .song {
+                height: 250px;
+                a {
+                    text-decoration: none;
                     .card-title {
                         display: block;
                         white-space: nowrap;
@@ -49,6 +49,23 @@ body::-webkit-scrollbar-thumb {
                         text-overflow: ellipsis;
                     }
                 }
+            }
+        }
+    }
+}
+
+#app {
+    #artist-songs {
+        .artist-song {
+            height: 280px;
+            .card-title {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .card-text {
+                white-space: normal;
             }
         }
     }

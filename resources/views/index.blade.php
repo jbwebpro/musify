@@ -20,22 +20,24 @@
           <div class="row song-lyrics-list">
             @foreach($songs as $song)
             <div class="col-md-3 mt-4">
-              <a href="{{route('songs.details',$song->id)}}" class="text-white">
-                <div class="card song bg-dark">
-                  <div class="card-body d-flex justify-content-start flex-column">
-                    <h5 class="card-title"><b>{{$song->title}}</b></h5>
-                    <p class="card-text">{{$song->excerpt(100)}}</p>
+              <div class="card song bg-dark" onclick="redirect()">
+                <div class="card-body d-flex justify-content-start flex-column">
+                    <a href="{{route('songs.details',$song->id)}}" class="text-white">
+                      <h5 class="card-title"><b>{{$song->title}}</b></h5>
+                      <p class="card-text">{{$song->excerpt(100)}}</p>
+                    </a>
                     <div class="create-at mt-auto d-flex justify-content-between">
                       <small>
                         {{$song->created_date}}
                       </small>
                       <small>
-                        {{$song->artist}}
+                        <a href="{{route('artists.details',$song->artist->id)}}" class="btn btn-darker btn-sm flat">
+                          {{$song->artist_name}}
+                        </a>
                       </small>
                     </div>
                   </div>
                 </div>
-              </a>
             </div>
             @endforeach
             <div class="col-md-12 mt-3">
@@ -51,4 +53,6 @@
 @endsection
 @section('scripts')
     <script src="{{asset('js/app.js')}}"></script>
+    <script>
+    </script>
 @endsection

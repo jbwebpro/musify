@@ -25,7 +25,7 @@
                   <i class="fa fa-star text-warning"></i>
                 </span>
                 {{" | "}}
-                <small>Artist: {{$song->artist}}</small>
+                <small>Artist: {{$song->artist_name}}</small>
               </div>
             </div>
             <div class="song-lyrics">
