@@ -4,7 +4,13 @@
   </div>
   <div class="form-group">
     <label for="artist">Arist</label>
-    <input type="text" name="artist" id="artist" class="form-control" placeholder="ex: Maroon 5" value="{{ old('artist') ?? $song->artist }}">
+    {{-- <input type="text" name="artist" id="artist" class="form-control" placeholder="ex: Maroon 5" value="{{ old('artist') ?? $song->artist }}"> --}}
+    <select class="form-control" name="artist_id" id="artist_id">
+      <option selected disabled>Select an Artist</option>
+      @foreach($artists as $artist)
+        <option value="{{$artist->id}}">{{$artist->name}}</option>
+      @endforeach
+    </select>
   </div>
   <div class="form-group">
     <label for="lyrics">Lyrics</label>

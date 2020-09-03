@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Artist;
 use App\Song;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -28,7 +29,8 @@ class SongController extends Controller
     public function create()
     {
         $song = new Song();
-        return view('admin.songs.create',compact('song'));
+        $artists = Artist::all();
+        return view('admin.songs.create',compact('song','artists'));
     }
 
     /**

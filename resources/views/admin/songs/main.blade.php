@@ -32,10 +32,10 @@
               @foreach($songs as $song)
               <tr>
                 <td>{{$song->title}}</td>
-                <td>{{$song->artist}}</td>
+                <td>{{$song->artist_name}}</td>
                 <td>{{$song->lyrics}}</td>
-                <td>{{$song->created_at}}</td>
-                <td>{{$song->updated_at}}</td>
+                <td>{{date('d-m-Y',strtotime($song->created_at))}}</td>
+                <td>{{date('d-m-Y',strtotime($song->updated_at))}}</td>
                 <td>
                   <a href="{{route('songs.show',$song->id)}}" class="btn btn-info btn-sm">Show</a>
                   <a href="{{route('songs.edit',$song->id)}}" class="btn btn-warning btn-sm">Edit</a>
