@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('artists', 'Admin\AjaxArtistController@artistsFetch')->name('artists.fetch');
+Route::get('artists-search', 'Admin\AjaxArtistController@artistsSearch')->name('artists.search');
